@@ -7,6 +7,7 @@ from typing import Tuple
 
 
 Info = Dict[str, Any]
+MatchData = Dict[str, str]
 Spec = Dict[str, Any]
 SerialNumber = List[str]
 ValidationError = Tuple[str, str]

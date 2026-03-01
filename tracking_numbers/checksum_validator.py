@@ -73,21 +73,24 @@ class ChecksumValidator(metaclass=ABCMeta):
 
 
 class S10(ChecksumValidator):
+    """S10 checksum per UPU standard S10."""
+
     WEIGHTS = [8, 6, 4, 2, 3, 5, 9, 7]
+    MODULO = 11
 
     def _check_digit(self, serial_number: SerialNumber) -> int:
         total = 0
         for digit, weight in zip(serial_number, self.WEIGHTS):
             total += int(digit) * weight
 
-        remainder = total % 11
+        remainder = total % self.MODULO
         if remainder == 1:
             return 0
 
         if remainder == 0:
             return 5
 
-        return 11 - remainder
+        return self.MODULO - remainder
 
 
 class Mod10(ChecksumValidator):

@@ -13,14 +13,13 @@ from tracking_numbers.serial_number import SerialNumberParser
 from tracking_numbers.serial_number import UPSSerialNumberParser
 from tracking_numbers.types import Courier
 from tracking_numbers.types import Info
+from tracking_numbers.types import MatchData
 from tracking_numbers.types import Product
 from tracking_numbers.types import SerialNumber
 from tracking_numbers.types import Spec
 from tracking_numbers.types import TrackingNumber
 from tracking_numbers.types import ValidationError
 from tracking_numbers.value_matcher import ValueMatcher
-
-MatchData = Dict[str, str]
 
 
 @dataclass

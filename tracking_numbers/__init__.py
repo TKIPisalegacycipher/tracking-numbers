@@ -14,7 +14,7 @@ else:
     DEFINITIONS = []
 
 
-def get_tracking_number(number: str, validate=True) -> Optional[TrackingNumber]:
+def get_tracking_number(number: str, validate: bool = True) -> Optional[TrackingNumber]:
     """Returns a TrackingNumber that matches the given number.
 
     Args:
