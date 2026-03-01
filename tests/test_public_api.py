@@ -4,7 +4,6 @@ from tracking_numbers import get_definition
 from tracking_numbers import get_tracking_number
 from tracking_numbers import possible_tracking_number
 
-
 # Known valid tracking numbers from courier specs
 VALID_USPS = "9405511108078863434863"
 VALID_FEDEX = "9611020987654312345672"

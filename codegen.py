@@ -5,7 +5,6 @@ os.environ["CODE_GENERATING"] = "true"
 from tracking_numbers.helpers.spec import iter_courier_specs  # noqa:E402
 from tracking_numbers.helpers.spec import iter_definitions  # noqa:E402
 
-
 import_statements = [
     "import re",
     "",

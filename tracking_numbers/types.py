@@ -5,7 +5,6 @@ from typing import List
 from typing import Optional
 from typing import Tuple
 
-
 Info = Dict[str, Any]
 MatchData = Dict[str, str]
 Spec = Dict[str, Any]

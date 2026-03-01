@@ -18,7 +18,6 @@ from tracking_numbers.types import Product
 from tracking_numbers.value_matcher import ExactValueMatcher
 from tracking_numbers.value_matcher import RegexValueMatcher
 
-
 DEFINITIONS = [
     TrackingNumberDefinition(
         courier=Courier(code="lasership", name="LaserShip"),

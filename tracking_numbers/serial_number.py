@@ -28,8 +28,7 @@ class SerialNumberParser(metaclass=ABCMeta):
         return repr_with_args(self)
 
     @abstractmethod
-    def parse(self, number: str) -> SerialNumber:
-        ...
+    def parse(self, number: str) -> SerialNumber: ...
 
 
 class DefaultSerialNumberParser(SerialNumberParser):

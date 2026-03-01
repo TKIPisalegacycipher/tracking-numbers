@@ -69,8 +69,15 @@ class TestDefinitionEdgeCases:
         """Helper to create a minimal TrackingNumberDefinition."""
         defaults = dict(
             courier=Courier(code="test", name="Test"),
-            product=kwargs.pop("product", __import__("tracking_numbers.types", fromlist=["Product"]).Product(name="Test")),
-            number_regex=kwargs.pop("number_regex", __import__("re").compile(r"(?P<All>\d+)")),
+            product=kwargs.pop(
+                "product",
+                __import__("tracking_numbers.types", fromlist=["Product"]).Product(
+                    name="Test"
+                ),
+            ),
+            number_regex=kwargs.pop(
+                "number_regex", __import__("re").compile(r"(?P<All>\d+)")
+            ),
             tracking_url_template=None,
             serial_number_parser=DefaultSerialNumberParser(),
             additional=[],
@@ -160,7 +167,9 @@ class TestCourierInfoWithNoneValues:
         tn = TrackingNumber(
             number="TEST123",
             courier=Courier(code="test", name="Test Courier"),
-            product=__import__("tracking_numbers.types", fromlist=["Product"]).Product(name="Test"),
+            product=__import__("tracking_numbers.types", fromlist=["Product"]).Product(
+                name="Test"
+            ),
             serial_number=None,
             tracking_url=None,
             match_data={},

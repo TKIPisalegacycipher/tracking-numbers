@@ -10,7 +10,6 @@ from tracking_numbers.checksum_validator import S10
 from tracking_numbers.checksum_validator import SumProductWithWeightsAndModulo
 from tracking_numbers.serial_number import DefaultSerialNumberParser
 
-
 serials_and_checks = [
     (
         "12345678",

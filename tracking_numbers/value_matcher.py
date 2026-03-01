@@ -9,12 +9,10 @@ from tracking_numbers.types import Spec
 
 class ValueMatcher(metaclass=ABCMeta):
     @abstractmethod
-    def __repr__(self):
-        ...
+    def __repr__(self): ...
 
     @abstractmethod
-    def matches(self, other: str) -> bool:
-        ...
+    def matches(self, other: str) -> bool: ...
 
     @classmethod
     def from_spec(cls, spec: Spec) -> "ValueMatcher":
