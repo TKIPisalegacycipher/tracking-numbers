@@ -9,6 +9,14 @@ from tracking_numbers.types import Spec
 from tracking_numbers.types import to_int
 
 
+def _mod10_check_digit(total: int) -> int:
+    """Compute the mod-10 check digit complement from a weighted sum."""
+    check = total % 10
+    if check != 0:
+        check = 10 - check
+    return check
+
+
 class ChecksumValidator(metaclass=ABCMeta):
     def __repr__(self):
         return repr_with_args(self)
@@ -111,11 +119,7 @@ class Mod10(ChecksumValidator):
             else:
                 total += int(digit)
 
-        check = total % 10
-        if check != 0:
-            check = 10 - check
-
-        return check
+        return _mod10_check_digit(total)
 
 
 class Mod7(ChecksumValidator):
@@ -196,7 +200,4 @@ class Luhn(ChecksumValidator):
             if x > 9:
                 x -= 9
             total += x
-        check = total % 10
-        if check != 0:
-            check = 10 - check
-        return check
+        return _mod10_check_digit(total)

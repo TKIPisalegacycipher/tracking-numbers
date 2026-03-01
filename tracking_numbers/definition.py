@@ -35,11 +35,10 @@ class Additional:
     def from_spec(cls, spec: Spec) -> "Additional":
         value_matchers: List[Tuple[ValueMatcher, Info]] = []
         for value_matcher_spec in spec["lookup"]:
-            # Create a copy of the value_matcher_spec without the 'match' and 'matches_regex' keys
             info = {
-                k: value_matcher_spec[k]
-                for k in set(list(value_matcher_spec.keys()))
-                - {"matches", "matches_regex"}
+                k: v
+                for k, v in value_matcher_spec.items()
+                if k not in {"matches", "matches_regex"}
             }
 
             value_matchers.append((ValueMatcher.from_spec(value_matcher_spec), info))
