@@ -1,8 +1,8 @@
 from dataclasses import dataclass
+from re import Pattern
 from typing import Dict
 from typing import List
 from typing import Optional
-from typing import Pattern
 from typing import Tuple
 
 from tracking_numbers.checksum_validator import ChecksumValidator
