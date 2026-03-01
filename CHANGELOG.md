@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-03-01
+
 ### Added
 
 - `possible_tracking_number()` API to return all matching candidates for a tracking number
