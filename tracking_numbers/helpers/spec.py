@@ -16,7 +16,7 @@ TestCase = Tuple[TrackingNumberDefinition, str, bool]
 def iter_courier_specs(base_dir: str = DEFAULT_BASE_DIR):
     for filename in listdir(base_dir):
         path = os.path.join(base_dir, filename)
-        with open(path) as f:
+        with open(path, encoding="utf-8") as f:
             yield json.load(f)
 
 
