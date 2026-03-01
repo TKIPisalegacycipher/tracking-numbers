@@ -18,6 +18,8 @@
 A library that parses tracking numbers and provides common types.
 The data is sourced from [`tracking_number_data`](https://github.com/jkeen/tracking_number_data/) and the definitions are code-generated.
 
+**Tested on Python 3.9, 3.10, 3.11, 3.12, and 3.13.**
+
 ## Why?
 
 The typical shipping tracking number has a lot of data encoded within.
