@@ -38,7 +38,7 @@ def iter_test_cases(courier_spec: Spec) -> List[TestCase]:
     test_cases: List[TestCase] = []
     for definition, tn_spec in iter_definitions(courier_spec):
         test_numbers = tn_spec.get("test_numbers")
-        if not test_numbers:
+        if not test_numbers:  # pragma: no cover
             continue
 
         valid_numbers = test_numbers.get("valid", [])

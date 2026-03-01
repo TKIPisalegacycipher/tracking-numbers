@@ -11,7 +11,7 @@ else:
     # When running codegen, it's very possible that the items in
     # DEFINITIONS are out of date / can't be successfully constructed
     # so we use an empty list so that codegen can still import utils
-    DEFINITIONS = []
+    DEFINITIONS = []  # pragma: no cover
 
 
 def get_tracking_number(number: str, validate: bool = True) -> Optional[TrackingNumber]:

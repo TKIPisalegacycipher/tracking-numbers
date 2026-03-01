@@ -29,4 +29,4 @@ jobs:
           poetry install
 
       - name: Run tests with coverage
-        run: poetry run pytest --cov=tracking_numbers --cov-report=term-missing --cov-fail-under=80
+        run: poetry run pytest --cov=tracking_numbers --cov-report=term-missing --cov-fail-under=100

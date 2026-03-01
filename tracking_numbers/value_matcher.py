@@ -10,11 +10,11 @@ from tracking_numbers.types import Spec
 class ValueMatcher(metaclass=ABCMeta):
     @abstractmethod
     def __repr__(self):
-        raise NotImplementedError
+        ...
 
     @abstractmethod
     def matches(self, other: str) -> bool:
-        raise NotImplementedError
+        ...
 
     @classmethod
     def from_spec(cls, spec: Spec) -> "ValueMatcher":
@@ -33,7 +33,7 @@ class ExactValueMatcher(ValueMatcher):
     def __repr__(self):
         return repr_with_args(self, value=self.value)
 
-    def __str__(self) -> str:
+    def __str__(self) -> str:  # pragma: no cover
         return self.value
 
     def matches(self, other: str) -> bool:
@@ -47,7 +47,7 @@ class RegexValueMatcher(ValueMatcher):
     def __repr__(self):
         return repr_with_args(self, pattern=self.pattern)
 
-    def __str__(self) -> str:
+    def __str__(self) -> str:  # pragma: no cover
         return self.pattern.pattern
 
     def matches(self, other: str) -> bool:

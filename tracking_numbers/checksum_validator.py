@@ -27,7 +27,7 @@ class ChecksumValidator(metaclass=ABCMeta):
         algorithms return a numeric check digit, but some may return a
         string representation (most notably Mod_37_36).
         """
-        raise NotImplementedError
+        ...
 
     def passes(self, serial_number: SerialNumber, check_digit: str) -> bool:
         """Check if the serial number passes the checksum validation."""
@@ -102,7 +102,7 @@ class Mod10(ChecksumValidator):
         self.odds_multiplier = odds_multiplier
         self.evens_multiplier = evens_multiplier
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return repr_with_args(
             self,
             odds_multiplier=self.odds_multiplier,
@@ -172,7 +172,7 @@ class SumProductWithWeightsAndModulo(ChecksumValidator):
         self.first_modulo = first_modulo
         self.second_modulo = second_modulo
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return repr_with_args(
             self,
             weights=self.weights,

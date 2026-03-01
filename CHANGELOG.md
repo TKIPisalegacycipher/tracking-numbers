@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integration tests for public API functions
 - Edge case tests for boundary inputs, special characters, and whitespace
 - GitHub Actions CI pipeline testing Python 3.9–3.13
-- `pytest-cov` for coverage measurement (80% threshold, currently 94.5%)
+- `pytest-cov` for coverage measurement (100% threshold)
 - Python 3.12, 3.13, and partial 3.14 compatibility
 - Windows compatibility
 - Type annotations on `spec.py` helper methods
