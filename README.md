@@ -1,6 +1,6 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+# tracking-numbers
+
+## Table of Contents
 
 - [tracking-numbers](#tracking-numbers)
   - [Why?](#why)
@@ -11,16 +11,15 @@
   - [Updating the definitions](#updating-the-definitions)
   - [Testing](#testing)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+A library that parses tracking numbers and provides common types. The data is sourced from [`tracking_number_data`](https://github.com/jkeen/tracking_number_data/) and the definitions are code-generated.
 
-# tracking-numbers
+## Why fork?
 
-A library that parses tracking numbers and provides common types.
-The data is sourced from [`tracking_number_data`](https://github.com/jkeen/tracking_number_data/) and the definitions are code-generated.
+This is a fork of @jcomo's [tracking-numbers](https://github.com/jcomo/tracking-numbers), which seems to have been abandoned, given the lack of response to several PRs and issue reports over the course of the past few years.
 
-**Tested on Python 3.9, 3.10, 3.11, 3.12, and 3.13.**
+This fork offers 100% test coverage as well as implementation of several improvements and best practices that have emerged since the last commits on the original repo ([changelog](/CHANGELOG.md)).
 
-## Why?
+## Why this library?
 
 The typical shipping tracking number has a lot of data encoded within.
 While some couriers share similar logic (serial number, check digit, etc), others have entirely different ways of representing tracking numbers.
@@ -33,11 +32,15 @@ The library itself has no external dependencies, and can be used to decode basic
 
 ## Installation
 
-Install the tracking-numbers library using pypi
+Install this fork using pip:
 
 ```sh
-pip install tracking-numbers
+pip install git+https://github.com/TKIPisalegacycipher/tracking-numbers.git
 ```
+
+### Compatbility
+
+Requires Python 3.10 or later. Tested with 3.10, 3.11, 3.12 and 3.13. Likely compatible with Python 3.14.
 
 ## Usage
 
