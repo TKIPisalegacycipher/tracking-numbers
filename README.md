@@ -3,8 +3,10 @@
 ## Table of Contents
 
 - [tracking-numbers](#tracking-numbers)
-  - [Why?](#why)
+  - [Why fork?](#why-fork)
+  - [Why this library?](#why-this-library)
   - [Installation](#installation)
+    - [Compatibility](#compatibility)
   - [Usage](#usage)
     - [`get_tracking_number(number)`](#get_tracking_numbernumber)
     - [`get_definition(product_name)`](#get_definitionproduct_name)
@@ -15,7 +17,7 @@ A library that parses tracking numbers and provides common types. The data is so
 
 ## Why fork?
 
-This is a fork of @jcomo's [tracking-numbers](https://github.com/jcomo/tracking-numbers), which seems to have been abandoned, given the lack of response to several PRs and issue reports over the course of the past few years.
+This is a fork of @jcomo's [tracking-numbers](https://github.com/jcomo/tracking-numbers), which seems to have been abandoned, given the lack of response to several PRs and issue reports over the course of the past few years. Thank you to @jcomo for your work, and I hope you're well, wherever you are.
 
 This fork offers 100% test coverage as well as implementation of several improvements and best practices that have emerged since the last commits on the original repo ([changelog](/CHANGELOG.md)).
 
@@ -38,9 +40,11 @@ Install this fork using pip:
 pip install git+https://github.com/TKIPisalegacycipher/tracking-numbers.git
 ```
 
-### Compatbility
+### Compatibility
 
-Requires Python 3.10 or later. Tested with 3.10, 3.11, 3.12 and 3.13. Likely compatible with Python 3.14.
+Requires Python 3.10 or later. Tested with 3.10, 3.11, 3.12 and 3.13. Likely compatible with Python 3.14. 
+
+> **Note:** Python 3.10 support likely ends when 3.10 goes EOL in October 2026.
 
 ## Usage
 
