@@ -1,4 +1,5 @@
 .idea/
 .claude/
+.coverage
 __pycache__/
 dist/
